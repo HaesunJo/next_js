@@ -1,16 +1,14 @@
 import { API_URL } from "../app/(home)/page"
 import styles from "../styles/movie-info.module.css"
 
-async function getMoive(id:string) {
-	await new Promise((resolve) => setTimeout(resolve, 1000))
-	// throw new Error("Error")
+export async function getMovie(id:string) {
 	const response = await fetch(`${API_URL}/${id}`)
 	
 	return response.json()
 }
 
 export default async function MovieInfo({id}: {id:string}){
-    const movie = await getMoive(id)
+    const movie = await getMovie(id)
 
 	// return <h6>{JSON.stringify(movie)}</h6>
 	return (
