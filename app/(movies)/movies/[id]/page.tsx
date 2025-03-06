@@ -6,7 +6,7 @@ import styles from "../../../../styles/movie-page.module.css"
 interface IParams {
 	params: { id: string }
 }
-export async function generateMetadata({ params }: IParams) {
+export async function generateMetadata({ params }: IParams): Promise<Metadata> {
 	const { id } = params
 	const movie = await getMovie(id)
 
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: IParams) {
 		title: movie.title
 	}
 }
-export default async function MovieDetails({ params }: IParams) {
+export default async function MovieDetails({ params }: IParams): Promise<Metadata> {
 	const { id } = await params
 
 	return (<div className={styles.container}>
