@@ -1,0 +1,19 @@
+.movie {
+	display              : grid;
+	grid-template-columns: 1fr;
+	gap                  : 20px;
+	cursor               : pointer;
+	place-items          : center;
+}
+
+.movie img {
+	max-width    : 100%;
+	min-height   : 100%;
+	border-radius: 10px;
+	transition   : opacity .3x ease-in-out;
+}
+
+.movie img { opacity: .7; }
+.movie img:hover { opacity: 1; }
+.movie a { text-align: center; }
+

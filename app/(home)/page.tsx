@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { resolve } from "path"
+import Movie from "../../components/movie"
+import styles from "../../styles/home.module.css"
 
 // metadata could be not only in layout but also in page script
 export const metadata = {
@@ -24,14 +26,15 @@ export default async function Page() {
 
 	return (
 		<div>
-			<h1>Hello this is landing page</h1>
-			<div>
-				{/* {JSON.stringify(movies)} */}
+			{/* <h1>Hello this is landing page</h1> */}
+			<div className={styles.container}>
 				{movies.map(movie =>
-					<li key={movie.id}>
-						{/* {movie.id} */}
-						<Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-					</li>)
+						// <li key={movie.id}>
+						// 	{/* {movie.id} */}
+						// 	<Link href={`/movies/${movie.id}`}>{movie.title}</Link>
+						// </li>
+						<Movie key={movie.id} id={movie.id} poster_path={movie.poster_path} title={movie.title} />
+					)
 				}
 			</div>
 		</div>
