@@ -12,8 +12,8 @@
 	border-radius: 10px;
 	transition   : opacity .3x ease-in-out;
 }
-
 .movie img { opacity: .7; }
 .movie img:hover { opacity: 1; }
+
 .movie a { text-align: center; }
 

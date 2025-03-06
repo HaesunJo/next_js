@@ -1,0 +1,14 @@
+.container {
+	width: 80%;
+
+	display              : grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap                  : 20px;
+}
+
+.container iframe {
+	border-radius: 10px;
+	opacity      : .8;
+	transition   : opacity .2s ease-in-out;
+}
+.container iframe:hover { opacity: 1; }

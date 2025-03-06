@@ -23,7 +23,4 @@
 	transform : none;
 	transition: all 0.1s ease-in-out;
 }
-
-.nav ul li:hover {
-	transform: scale(1.05);
-}
+.nav ul li:hover { transform: scale(1.05); }
