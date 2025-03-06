@@ -1,5 +1,4 @@
 import { Suspense } from "react"
-import { API_URL } from "../../../(home)/page"
 import MovieInfo, { getMovie } from "../../../../components/moive-info"
 import MovieTrailers from "../../../../components/movie_trailers"
 import styles from "../../../../styles/movie-page.module.css"
@@ -8,8 +7,8 @@ interface IParams {
 	params: { id: string }
 }
 export async function generateMetadata({ params }: IParams) {
-	if (!params?.id) return { title: "No title found" }
-	
+	// if (!params?.id) return { title: "No title found" }
+
 	const { id } = await params
 	const movie = await getMovie(id)
 

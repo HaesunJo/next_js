@@ -2,14 +2,13 @@ import Link from "next/link"
 import { resolve } from "path"
 import Movie from "../../components/movie"
 import styles from "../../styles/home.module.css"
+import { API_URL } from "../constants"
 
 // metadata could be not only in layout but also in page script
 export const metadata = {
 	title: 'Home',
 	description: 'You are at the main page',
 }
-
-export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies"
 
 async function getMovies() {
 	const response = await fetch(API_URL)
